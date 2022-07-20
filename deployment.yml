@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sampleapp.com
+  name: sampleapp.com
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sampleapp.com
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sampleapp.com
+    spec:
+      containers:
+        - image: 127.0.0.1:5000/sampleapp.com
+          name: sampleapp-com-kxgxz
+          resources: {}
+status: {}

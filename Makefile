@@ -5,7 +5,7 @@
 
 run_website:
   	docker build -t sampleapp.com . && \
-	  docker run --rm --name sampleapp.com -p 8000:80 -d sampleapp.com
+	  docker run --rm --name sampleapp.com -p 5000:80 -d sampleapp.com
 
 stop_website:
 	docker stop sampleapp.com
@@ -28,7 +28,7 @@ create_kind_cluster: install_kind install_kubectl create_docker_registry
 create_docker_registry:
 	if docker ps | grep -q 'local-registry'; \
 	then echo "---> local-registry already created; skipping"; \
-	else docker run --name local-registry -d --restart=always -p 8000:8000 registry:2; \
+	else docker run --name local-registry -d --restart=always -p 5000:5000 registry:2; \
 	fi
 
 connect_registry_to_kind_network:
