@@ -12,4 +12,4 @@ spec:
       targetPort: 80
   selector:
     app: {{ .Values.appName }}
-  type: ClusterIP
+  type: ClusterIP # speify Nodeport when using aws ingress controller
