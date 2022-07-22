@@ -54,7 +54,7 @@ create_kind_cluster_with_registry:
 
 # Bootstrap application
 build_docker_image:
-	docker build -t sampleapp . && \
+	docker build -t sampleapp.com . && \
 	  docker tag sampleapp.com 127.0.0.1:5000/sampleapp.com && \
 	    docker push 127.0.0.1:5000/sampleapp.com 
 
